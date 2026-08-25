@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kilometers & Miles Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="converter" aria-labelledby="page-title">
+    <p class="eyebrow">Distance converter</p>
+    <h1 id="page-title">Kilometers to Miles</h1>
+    <p class="intro">Enter a distance below and get the converted value instantly.</p>
+
+    <button id="directionButton" class="direction-button" type="button" aria-label="Switch conversion direction">
+      <span id="fromUnit">Kilometers</span>
+      <span aria-hidden="true">→</span>
+      <span id="toUnit">Miles</span>
+    </button>
+
+    <form id="converterForm" novalidate>
+      <label id="inputLabel" for="distanceInput">Distance in kilometers</label>
+      <div class="input-wrapper">
+        <input id="distanceInput" type="number" step="any" inputmode="decimal" placeholder="Enter a number" autocomplete="off">
+        <span id="inputUnit" aria-hidden="true">km</span>
+      </div>
+      <button class="convert-button" type="submit">Convert</button>
+    </form>
+
+    <div id="result" class="result" aria-live="polite">Your result will appear here.</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
